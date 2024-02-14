@@ -52,7 +52,6 @@ $(document).ready(function () {
         } else {
             $(this).next().show();
         }
-
     });
 
 
@@ -115,7 +114,7 @@ $(document).ready(function () {
             p[3].setAttribute('style', 'width:100%;transition:all 2s;');
             p[4].setAttribute('style', 'width:100%;transition:all 2.3s;');
         },
-        offset: '100%'
+        offset: '90%'
     });
 
     // filter work
