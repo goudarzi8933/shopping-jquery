@@ -33,6 +33,27 @@ $(document).ready(function () {
         $('.form').removeClass('login-active').removeClass('sign-up-active')
     });
 
+    // validation form 
+    $("input[data-regex").keyup(function () {
+        let regType = $(this).attr('data-regex');
+
+        let regex = null;
+        if (regType == 'email') {
+            regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        }
+        else if (regType == 'password') {
+            regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        }
+
+        let inputValue = $(this).val();
+
+        if (regex.test(inputValue)) {
+            $(this).next().hide();
+        } else {
+            $(this).next().show();
+        }
+
+    });
 
 
     // scroll
