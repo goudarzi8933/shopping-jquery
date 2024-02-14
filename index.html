@@ -103,8 +103,13 @@
 
             <!--inputs-->
             <form>
-                <input type="email" name="email" placeholder="Example@gmail.com" />
-                <input type="password" name="password" placeholder="Password" />
+                <div class="position-relative">
+                    <input class="mb-4" type="email" name="email" data-regex="email" placeholder="Example@gmail.com" />
+                    <span class="error-email">Email is not valid</span>
+
+                    <input class="mb-4" type="password" name="password" data-regex="password" placeholder=" Password" />
+                    <span class="error-pass">Password must be more than 8 characters and at least one number</span>
+                </div>
                 <input type="submit" value="Log In" />
             </form>
 
@@ -183,8 +188,8 @@
             </div>
             <div class="row justify-content-center">
 
-                <label for="">Support 24/7</label>
                 <div class="col-md-6 way-fade-left py-3"">
+                <label>Support 24/7</label>
                     <div class=" progress">
                     <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
                         aria-valuemax="100">100%
