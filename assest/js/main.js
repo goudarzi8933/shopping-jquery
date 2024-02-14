@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    let emailField = document.getElementById('email-field');
-    let emailLabel = document.getElementById('email-label');
-    let emailError = document.getElementById('email-error');
 
     // preloader
     $(window).on('load', function () {
@@ -35,9 +32,6 @@ $(document).ready(function () {
     $('.form-cancel').on('click', function () {
         $('.form').removeClass('login-active').removeClass('sign-up-active')
     });
-
-
-
 
 
 
